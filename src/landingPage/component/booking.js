@@ -167,12 +167,16 @@ export default function ImgMediaCard({
             {discount}
           </Typography>
         )}
+     
+     
+
+
       </CardContent>
       {user && !loading && (
         <CardActions>
           <Link to={`/${name}`}>
           <Button
-            size="median"
+         size="median"
             sx={{ fontSize: "18px" }}
             // onClick={() => ()}
           >

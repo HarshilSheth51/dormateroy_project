@@ -12,20 +12,12 @@ import ImgMediaCard from "./booking";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faClock, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { getDate } from "date-fns";
+import { faArrowRight, faXmark } from "@fortawesome/free-solid-svg-icons";
 import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
 import moment from "moment";
-import { InlineIcon } from "@iconify/react";
 import auth from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import Datepicker from "./datepickeer";
-import { MobileDatePicker } from "@mui/x-date-pickers";
-import ResponsiveDatePickers from "./datepickeer";
-import dayjs from "dayjs";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 
 
@@ -166,15 +158,13 @@ export default function Hero() {
       });
     }
 
-    if (detail.sortby == "rating")
+    if (detail.sortby === "rating")
       getData = getData.filter((element) => {
-        if (element.rating >= 200) {
+        if (element.rating >= 100) {
           return element;
         }
       });
-    getData = getData.sort((a, b) => {
-      return a.rating - b.rating;
-    });
+   
 
     if (detail.sortby == "HighestPrice")
       getData = getData.filter((element) => {
@@ -196,11 +186,11 @@ export default function Hero() {
       return a.price - b.price;
     });
 
-    if (detail.days == "Halfday") {
-      getData = getData.filter((element) => {
-        return element.price / 2;
-      });
-    }
+    // if (detail.days == "Halfday") {
+    //   getData = getData.filter((element) => {
+    //     return element.price / 2;
+    //   });
+    // }
 
     setnewcard(getData);
   };
@@ -374,6 +364,7 @@ export default function Hero() {
                   whiteSpace: "nowrap",
                   marginTop: "23px",
                   fontFamily: "Josefin Sans",
+                  marginLeft:'20px'
                 }}
               >
                 Cheak-In
@@ -387,7 +378,7 @@ export default function Hero() {
                 }}
                 inputProps={{
                   style: {
-                    fontSize: "20px",
+                    fontSize: "21px",
                   },
                 }}
                 sx={{ marginLeft: "10px", marginTop: "20px" }}

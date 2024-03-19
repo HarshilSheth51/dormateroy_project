@@ -35,9 +35,11 @@ import {
   faPhone,
   faRestroom,
   faUser,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import Names from "./dormateroy";
 import toast from "react-hot-toast";
+import Invoice from "./invoice";
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -90,8 +92,9 @@ const Userstatus = ({ dorname }) => {
     if (user) {
       fetch(
         "https://dormatery-project-default-rtdb.firebaseio.com/regidata.json"
-      ).then((res) => res.json())
-      .then((data) => {
+      )
+        .then((res) => res.json())
+        .then((data) => {
           let newobj = Object.values(data);
           const foundUser = newobj.find((obj) => user.email === obj.email);
           if (foundUser) {
@@ -116,6 +119,7 @@ const Userstatus = ({ dorname }) => {
           const founddata = Object.values(data).filter(
             (values) => username === values.username
           );
+          console.log(founddata);
           setnewdata(founddata);
           setlength(founddata.length);
         })
@@ -140,8 +144,6 @@ const Userstatus = ({ dorname }) => {
         });
     }
   }, [username]);
-
-
 
   const Change = (event) => {
     setdormateroyname(event.target.value);
@@ -232,6 +234,10 @@ const Userstatus = ({ dorname }) => {
     }
   };
 
+  // const ondelete =() =>{
+  //   setnewdata()
+  // }
+
   return (
     <>
       <Stack
@@ -299,7 +305,6 @@ const Userstatus = ({ dorname }) => {
             >
               Rating & Review
             </Tab>
-            <Tab sx={{ mt: "5px" }}>Third tab</Tab>
           </TabList>
           <TabPanel value={0} sx={{ overflow: "auto" }}>
             <Box
@@ -338,7 +343,7 @@ const Userstatus = ({ dorname }) => {
                 </CardContent>
               </Card>
 
-              <Card variant="solid" color="danger" invertedColors>
+              {/* <Card variant="solid" color="danger" invertedColors>
                 <CardContent orientation="horizontal">
                   <CircularProgress
                     size="lg"
@@ -363,7 +368,7 @@ const Userstatus = ({ dorname }) => {
                     <Typography level="h2">0 Times</Typography>
                   </CardContent>
                 </CardContent>
-              </Card>
+              </Card> */}
               <Card
                 variant="solid"
                 color="primary"
@@ -583,7 +588,6 @@ const Userstatus = ({ dorname }) => {
                           </p>
                         </Stack>
                       )}
-                    
                     </CardContent>
                   </Card>
 
@@ -637,6 +641,11 @@ const Userstatus = ({ dorname }) => {
                       {/* <Invoice /> */}
                     </CardContent>
                   </Card>
+
+                  {/* <FontAwesomeIcon icon={faXmark} size="lg"
+                  style={{marginLeft:'4%' , marginTop:'7%' , cursor:'pointer'}}
+                  onClick={ondelete}
+                  ></FontAwesomeIcon> */}
                 </Stack>
               ))}
           </TabPanel>

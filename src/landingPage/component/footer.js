@@ -35,7 +35,7 @@ export default function Footer() {
         flexDirection: 'column',
         alignItems: 'center',
         gap: { xs: 4, sm: 8 },
-        py: { xs: 8, sm: 10 },
+        py: { xs: 8, sm: 5 },
         textAlign: { sm: 'center', md: 'left' },
       }}
     >
@@ -68,7 +68,7 @@ export default function Footer() {
              */}
           </Box>
         </Box>
-        <Box
+        {/* <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
@@ -87,8 +87,8 @@ export default function Footer() {
           <Link color="text.secondary" href="#">
             Press
           </Link>
-        </Box>
-        <Box
+        </Box> */}
+        {/* <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
@@ -107,7 +107,7 @@ export default function Footer() {
           <Link color="text.secondary" href="#">
             Contact
           </Link>
-        </Box>
+        </Box> */}
       </Box>
       <Box
         sx={{
