@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import AppAppBar from './navbar';
+import { Stack } from '@mui/system';
 
 const Aboutus = () =>{
     return(
 
         <>
-        
+          <AppAppBar/>
         <div class="responsive-container-block bigContainer">
   <div class="responsive-container-block Container bottomContainer">
     <div class="ultimateImg">
@@ -18,7 +19,7 @@ const Aboutus = () =>{
         <img class="stars" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp5.svg"/>
       </div> */}
     </div>
-    <div class="allText bottomText">
+    <div class="allText bottomText" >
       <p class="text-blk headingText">
         About Me
       </p>
@@ -28,6 +29,7 @@ const Aboutus = () =>{
       <p class="text-blk description">
       At Dormitory Discover, our mission is to simplify the process of finding suitable dormitory accommodations for students and young professionals. We believe that finding the right living space should be hassle-free and transparent, and we're committed to providing a platform that connects dormitory owners with potential tenants in a seamless and efficient manner.
       </p>
+      <div>
       <p class="text-blk headingText">
       Our Goals
       </p>
@@ -39,6 +41,7 @@ Transparency: We promote transparency in dormitory rental transactions by provid
 User Experience: We prioritize user experience and continuously work to enhance our platform's features and functionality to make the dormitory search process as smooth and enjoyable as possible.
 
       </p>
+      </div>
       <p class="text-blk headingText">
       Contact Us
       </p>

@@ -163,7 +163,9 @@ export default function Hero() {
         if (element.rating >= 100) {
           return element;
         }
+        console.log('element.rating', element.rating)
       });
+      
    
 
     if (detail.sortby == "HighestPrice")
@@ -453,12 +455,18 @@ export default function Hero() {
                 <div class="social-links">
                   {citydata.map((values) => {
                     return (
-                      <div onClick={() => handlecity(values.name)}>
+                      <div  onClick={() => handlecity(values.name)}>
                         <img class="bg-img " src={values.backgroundImage}></img>
                       </div>
                     );
                   })}
                 </div>
+               
+
+
+
+
+
               </div>
             </Stack>
             <div style={{ textAlign: "center", marginTop: "10px" }}>
@@ -677,11 +685,18 @@ export default function Hero() {
                 Check Availabilty
               </Button>
             </div>
+
+         
           </Stack>
         </Container>
       </Box>
+     
 
       <Grid container sx={{ alignItems: "center", justifyContent: "center" }}>
+   
+
+
+
         {/* {data &&
           data.map((values) => {
             return (

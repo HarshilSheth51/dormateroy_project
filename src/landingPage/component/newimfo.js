@@ -23,6 +23,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Breadcrumbs,
 } from "@mui/material";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -140,11 +141,39 @@ const Newbookinginfo = ({
           // onClick={() => handleImageClick((value + 1) % sliderImages.length)}
           style={{ cursor: "pointer" }}
         />
+            <div role="presentation" style={{marginTop:"20px"}}>
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link  color="inherit" to="/" style={{fontSize:'20px'}}>
+          Back to home
+        </Link>
+        </Breadcrumbs>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div
           style={{
             alignItems: "center",
             textAlign: "center",
-            paddingTop: "10px",
+            paddingTop: "0px",
           }}
         ></div>
       </div>

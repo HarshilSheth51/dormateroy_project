@@ -79,19 +79,8 @@ const BookingInfoPage = () => {
 
 
    
-  //  useEffect(() => {
-  //   fetch(
-  //     "https://dormatery-project-default-rtdb.firebaseio.com/dormaterydata.json"
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const product = Data.find((item) => item.name === itemId);
-  //       if (!product) {
-  //         return <p> not found</p>;
-  //       }
-  //       // console.log(data)
-  //     })
-  //  })
+
+
   const product = Data.find((item) => item.name === itemId);
   if (!product) {
     return <p> not found</p>;
