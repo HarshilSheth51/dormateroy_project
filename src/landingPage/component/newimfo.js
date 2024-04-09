@@ -149,26 +149,6 @@ const Newbookinginfo = ({
         </Breadcrumbs>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div
           style={{
             alignItems: "center",
