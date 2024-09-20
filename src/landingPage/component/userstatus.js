@@ -299,7 +299,6 @@ const Userstatus = ({ dorname }) => {
             >
               Rating & Review
             </Tab>
-            // <Tab sx={{ mt: "5px" }}>Third tab</Tab>
           </TabList>
           <TabPanel value={0} sx={{ overflow: "auto" }}>
             <Box
@@ -823,9 +822,6 @@ const Userstatus = ({ dorname }) => {
               Submit
             </button>
           </TabPanel>
-          // <TabPanel value={2}>
-          //   <b>Third</b> tab panel
-          // </TabPanel>
         </Tabs>
       </Stack>
     </>
