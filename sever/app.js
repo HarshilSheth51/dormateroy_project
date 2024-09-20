@@ -9,7 +9,7 @@ const stripe = require("stripe")(
 
 app.use(express.json());
 app.use(express.static("public"));
-app.use(cors({origin:"http://localhost:3000"}));
+app.use(cors({ origin: 'https://dormateroy-project-n4uh.vercel.app' }));
 
 app.post("/paymentsession", async (req, res) => {
     try {
@@ -33,8 +33,8 @@ app.post("/paymentsession", async (req, res) => {
           };
         }),
         mode: "payment",
-        success_url: "http://localhost:3000/success",
-        cancel_url: "http://localhost:3000/cancel",
+        success_url: 'https://dormateroy-project-n4uh.vercel.app/success',
+        cancel_url: 'https://dormateroy-project-n4uh.vercel.app/cancel',
       });
   
   
