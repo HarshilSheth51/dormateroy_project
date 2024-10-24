@@ -209,19 +209,6 @@ export default function AuthLoginForm() {
       >
         Login
       </LoadingButton>
-      // {login ? (
-      //   navigate("/")
-      // ) : (
-      //   <button
-      //     type="button"
-      //     class="login-with-google-btn"
-      //     onClick={googlelogin}
-      //   >
-      //     Sign in with Google
-      //   </button>
-      // )}
-
-
       {/* </RouterLink> */}
     </>
   );
